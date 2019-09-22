@@ -11,15 +11,15 @@ export default class Login extends Component{
 		super(props);
 
 		this.state = {
-			email:'',
-			password:'',
+			email:'regnier.neira@virginiogomez.cl',
+			password:'regnier320',
 			logueado:false
 		};
 	}
 
 	handleLogin = async () => {
 		this.props.navigation.navigate('Main')
-		/*this.setState({logueado:true})
+		this.setState({logueado:true})
 		if(this.state.email!="" && this.state.password!=""){
 			if(validator.isEmail(this.state.email)){
 				try{
@@ -34,7 +34,10 @@ export default class Login extends Component{
 					if(json.user.role){
 						await AsyncStorage.setItem('role', json.user.id)
 					}*/
-					/*this.props.navigation.navigate('Main')
+					if(json.access_token!=''){
+						this.props.navigation.navigate('Main')
+					}
+					
 					console.log(json)
 				}catch(error){
 					ToastAndroid.show('error', ToastAndroid.SHORT);
@@ -45,7 +48,7 @@ export default class Login extends Component{
 		}else{
 			ToastAndroid.show("Debe ingresar todos sus datos", ToastAndroid.SHORT);
 		}
-		this.setState({logueado:false})*/
+		this.setState({logueado:false})
 	}
 
 	render(){

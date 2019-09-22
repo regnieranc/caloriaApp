@@ -77,7 +77,7 @@ const RootStack = createBottomTabNavigator({
 	}
 },
 {
-	initialRouteName: 'Home',
+	initialRouteName: 'Calorias',
 	tabBarOptions: {
 		inactiveTintColor: '#646464',
 		activeTintColor: '#a333c8',
