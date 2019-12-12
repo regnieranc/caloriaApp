@@ -10,11 +10,14 @@ export default class Tabla extends React.Component{
 	}
 
 	render(){
+		console.log(this.props)
 		return(
 			<View style={styles.container}>
-        		<Table>
+        		<Table borderStyle={{borderWidth: 0.5, borderColor: '#8b2baa'}}>
           			<Row data={this.props.headers} style={styles.head} textStyle={styles.text}/>
-          			<Rows data={null} textStyle={styles.text}/>
+          			<TableWrapper>
+          				<Rows data={this.props.data} textStyle={styles.text}/>
+          			</TableWrapper>
         		</Table>
       		</View>
 		)
@@ -22,7 +25,8 @@ export default class Tabla extends React.Component{
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: 'transparent' },
+  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: 'transparent'},
   head: { height: 40, backgroundColor: '#a333c8' },
-  text: { margin: 6, color:'#fff' }
+  text: { margin: 6, color:'#fff', textAlign:'center' },
+
 });

@@ -82,7 +82,7 @@ export default class Calorias extends React.Component{
 				colors={['#ec2F4B', '#009FFF']}
 				style={styles.gradient}
 			>
-				<ScrollView>
+				<View>
 					<View style={{height:200}}>
 						{
 							!this.state.abcSelected?
@@ -140,7 +140,7 @@ export default class Calorias extends React.Component{
 							headers={['Fecha', 'Cantidad', 'Alimento', 'Calorias', 'Accion']}
 						/>
 					</View>
-				</ScrollView>
+				</View>
 			</LinearGradient>	
 		)
 	}
